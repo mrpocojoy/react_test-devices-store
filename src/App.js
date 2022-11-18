@@ -8,7 +8,12 @@ function App() {
   useEffect(() => {
     productService
       .getAll()
-      .then((products) => console.log(products))
+      .then(products => console.log(products))
+      .catch(error => console.error(error))
+    
+    productService
+      .getById({ id: 'ZmGrkLRPXOTpxsU4jjAcv' })
+      .then(product => console.log(product))
       .catch(error => console.error(error))
     
     cartService
@@ -24,7 +29,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello World!</h1>
     </div>
   )
 }
