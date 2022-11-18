@@ -76,6 +76,10 @@
         "error",
         "always"
       ],
+      "no-extra-parens": [
+        "error",
+        "all"
+      ],
       "arrow-spacing": [
         "error",
         {
