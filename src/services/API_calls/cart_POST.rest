@@ -1,0 +1,26 @@
+
+######################
+# POST PRODUCT -- CORRECT DATA
+
+POST https://front-test-api.herokuapp.com/api/cart
+Content-Type: application/json
+
+{
+  "id": "ZmGrkLRPXOTpxsU4jjAcv",
+  "colorCode": 1,
+  "storageCode": 2
+}
+
+
+
+######################
+# POST PRODUCT -- MISSING DATA (HTTP 404)
+
+POST https://front-test-api.herokuapp.com/api/cart
+Content-Type: application/json
+
+{
+  "id": "ZmGrkLRPXOTpxsU4jjAcv",
+  "storageCode": 2
+}
+

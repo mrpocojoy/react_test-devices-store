@@ -1,0 +1,20 @@
+
+######################
+# GET PRODUCTS LIST
+
+GET https://front-test-api.herokuapp.com/api/product
+
+
+
+######################
+# GET SINGLE PRODUCT -- EXISTING
+
+GET https://front-test-api.herokuapp.com/api/product/ZmGrkLRPXOTpxsU4jjAcv
+
+
+
+######################
+# GET SINGLE PRODUCT -- NON-EXISTING (HTTP500)
+
+GET https://front-test-api.herokuapp.com/api/product/ZmGrkLRPXOTpxsU3jjAcv
+
