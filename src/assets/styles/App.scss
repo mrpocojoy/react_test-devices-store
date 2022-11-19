@@ -1,3 +1,45 @@
-body {
-  margin: auto;
+$backgroundGrey: #eeeeee;
+$mainBlue: #00254b;
+$highlightGreen: #00e4c0;
+$appChildrenPadding: 0 5vw;
+$maxAppWidth: 1500px;
+
+
+.app {
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      background-color: $backgroundGrey;
+
+      & > div,
+      .header__content-wrapper {
+        max-width: $maxAppWidth;
+        padding: $appChildrenPadding;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.button {
+  margin: 4px 2px;
+  padding: 1rem 3rem;
+
+  cursor: pointer;
+  display: inline-block;
+
+  background-color: none;
+  border: none;
+  border-radius: 3rem;
+  color: black;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+
+  &__cart {
+    width: 50%;
+    background-color: $highlightGreen;
+    color: $mainBlue;
+    font-weight: bold;
+  }
 }

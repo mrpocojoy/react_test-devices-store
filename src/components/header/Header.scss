@@ -1,0 +1,48 @@
+header {
+  padding: 1rem 0;
+  background-color: #00254b;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.header {
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.store-logo > img {
+  width: 10rem;
+}
+
+.cart-toggle {
+  display: flex;
+  align-items: center;
+  flex: 0 0 2rem;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 1.25;
+    stroke: white;
+  }
+
+  .cart-badge {
+    margin-left: .25rem;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    padding: .3rem;
+    text-align: center;
+
+    font-size: .8rem;
+    font-weight: bold;
+    color: white;
+
+    background-color: #00e4c0;
+    border-radius: 5rem;
+  }
+}

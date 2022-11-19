@@ -1,7 +1,15 @@
 import 'assets/styles/App.scss'
+
 import { useEffect } from 'react'
 import { cartService } from 'services/cart'
 import { productService } from 'services/product'
+
+import DetailsView from 'pages/ProductDescriptionPage/DetailsView'
+import ListView from 'pages/ProductListPage/ListView'
+import Header from 'components/header/Header'
+
+import testItem from 'data/testItem'          // Just for testing purposes, TODO: REMOVE
+
 
 function App() {
 
@@ -18,17 +26,22 @@ function App() {
     
     cartService
       .add({
-        'id': 'ZmGrkLRPXOTpxsU4jjAcv',
-        'colorCode': 1,
-        'storageCode': 2
+        id: 'ZmGrkLRPXOTpxsU4jjAcv',
+        colorCode: 1,
+        storageCode: 3
       })
       .then(cartSize => console.log(cartSize))
       .catch(error => console.error(error))
   }, [])
   
+  console.log(new Date().getTime())
 
   return (
-    <div className="App">
+    <div className="app">
+      <Header />
+      <ListView />
+      <DetailsView item={testItem} />
+      Footer
     </div>
   )
 }

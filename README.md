@@ -46,10 +46,13 @@ These are the key milestones to be tracked during this test:
 - Provide navigation functionality to listed items @ PLP.
 - Include "back" navigation functionality @ PDP.
 
-### MILESTONE 5 - Setup context
+### MILESTONE 5 - Provide data to components
 - Wrap app into React BrowserRouter.
 - Provide navigation functionality to listed items @ PLP.
 - Include "back" navigation functionality @ PDP.
+
+### MILESTONE X - **************
+- ...
 
 
 

@@ -55,6 +55,10 @@
     },
     "rules": {
       "no-unused-vars": "warn",
+      "quote-props": [
+        "error",
+        "as-needed"
+      ],
       "indent": [
         "error",
         2
@@ -78,7 +82,7 @@
       ],
       "no-extra-parens": [
         "error",
-        "all"
+        "functions"
       ],
       "arrow-spacing": [
         "error",
