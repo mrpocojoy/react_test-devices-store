@@ -1,6 +1,10 @@
 .product-details {
   margin: 2rem auto;
 
+  &__back-link {
+    margin: 2rem 0 .5rem;
+  }
+
   &__marketing-info-wrapper {
     background-color: white;
     box-shadow: 0 0 3px #ddd;
@@ -117,8 +121,17 @@
 .product-actions {
   &__wrapper {}
 
-  &__title {}
+  &__title {
+    margin: 3rem 0 .5rem;
 
+  }
+
+
+  &__status {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: .75rem;
+  }
 }
 
 .selector {
@@ -147,13 +160,24 @@
       border-radius: .3rem;
       color: #646464;
       background-color: white;
-      border: 1px solid #00254b;
+      border: 1px solid #ccc;
 
       &.active {
         border: 2px solid #005bcb;
         color: black;
       }
+
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+
+      .item-color-tag {
+        pointer-events: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50rem;
+        border: 1px solid #ddd;
+      }
     }
   }
-
 }

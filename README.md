@@ -1,5 +1,7 @@
 # Test Devices Store
-> In this mini-app we want to replicate a given frontend schema, pretending we want to build a smart devices online store.
+> In this mini-app we want to replicate a given frontend schema, pretending we want to build a smart devices online store.\
+> To speed up the development process, I have used [_this site_](https://www.phonehouse.es) as UI example, changing a few elements and the page structure to adapt it to what is requested by the test.
+
 <!-- > Live demo [_here_](https://www.example.com). If you have the project hosted somewhere, include the link here. -->
 
 ---
@@ -46,14 +48,22 @@ These are the key milestones to be tracked during this test:
 - Provide navigation functionality to listed items @ PLP.
 - Include "back" navigation functionality @ PDP.
 
-### MILESTONE 5 - Provide data to components
-- Wrap app into React BrowserRouter.
-- Provide navigation functionality to listed items @ PLP.
+### MILESTONE 5 - Obtain and persist products data
+- Create utils to persist data in local storage.
+- Create customHooks to obtain products data.
+
+### MILESTONE 6 - Enable search bar filtering
+- Create references and methods to filter data @ PLP.
 - Include "back" navigation functionality @ PDP.
 
 ### MILESTONE X - **************
 - ...
 
+
+### EXTRA TASKS - **************
+- Provide random discounts to some products
+- Use badges in PLP to improve some "product's sellability"
+- Include a cart content modal preview
 
 
 

@@ -1,4 +1,4 @@
-const Image = ({ source, altText, ...props }) => {
+const Image = ({ source, altText }) => {
   return (
     <img className="item-image" src={source} alt={altText} />
   )

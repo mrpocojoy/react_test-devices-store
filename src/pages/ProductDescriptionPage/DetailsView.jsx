@@ -1,20 +1,38 @@
 import './DetailsView.scss'
 
+import { useParams } from 'react-router-dom'
+import { useProductInfo } from 'hooks/useProductInfo'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
+import BackLink from 'components/back-link/BackLink'
 import MarketingInfo from './mkt-info/MarketingInfo'
 import TechInfo from './tech-info/TechInfo'
 
 
-const DetailsView = ({ item }) => (
-  <div className="product-details">
-    
-    <button>Navigate Back!!</button>
 
-    <div className="product-details__wrapper">
-      <MarketingInfo item={item} />
-      <TechInfo item={item} />
+const DetailsView = () => {
+
+  const { productId } = useParams()
+  const { isLoading, productInfo } = useProductInfo(productId)
+
+
+  if (isLoading)
+    return <h1>Loading</h1>
+  
+  return (
+    <div className="product-details">
+
+      <div className="product-details__back-link">
+        <BackLink label="Products" icon={faArrowLeft} />
+      </div>
+      
+      <div className="product-details__wrapper">
+        <MarketingInfo item={productInfo} />
+        <TechInfo item={productInfo} />
+      </div>
+
     </div>
-    
-  </div>
-)
+  )
+}
 
 export default DetailsView

@@ -1,32 +1,25 @@
 import './ListView.scss'
 
+import { useProductList } from 'hooks/useProductList'
+
+import PageTitle from 'components/page-title/PageTitle'
+import SearchBar from './search-bar/SearchBar'
 import ItemsList from './items-list/ItemsList'
-import Search from './search-bar/Search'
-
-const PageHeader = ({ cp, label, ...props }) => {
-  const localCP = cp + '__header'
-
-  return (
-    <div className={localCP}>
-      <h1 className={localCP + '-title'}>{label}</h1>
-      {props.children}
-    </div>
-  )
-}
-
 
 
 const ListView = () => {
 
-  
+  const { products } = useProductList()
+  const filteredProducts = products
+
   return (
     <div className="products-list__wrapper">
       
-      <PageHeader cp={'products-list'} label="Our Devices">
-        <Search />
-      </PageHeader>
+      <PageTitle cp={'products-list'} label="Our Devices">
+        <SearchBar placeholder="Search in PhoneHouse"/>
+      </PageTitle>
 
-      <ItemsList />
+      <ItemsList products={filteredProducts}/>
     </div>
   )
 }

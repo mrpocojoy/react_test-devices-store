@@ -21,17 +21,16 @@ header {
 .cart-toggle {
   display: flex;
   align-items: center;
+  gap: 10px;
   flex: 0 0 2rem;
 
-  svg {
-    width: 2rem;
-    height: 2rem;
-    stroke-width: 1.25;
-    stroke: white;
+  .cart-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white;
   }
 
   .cart-badge {
-    margin-left: .25rem;
     width: 1rem;
     height: 1rem;
     line-height: 1rem;

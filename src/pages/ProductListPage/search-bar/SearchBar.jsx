@@ -1,7 +1,7 @@
 import SearchIcon from './SearchIcon'
 // import { useRef } from 'react'
 
-const Search = () => {
+const SearchBar = ({ placeholder }) => {
 
   // const filter = useRef()
 
@@ -9,10 +9,10 @@ const Search = () => {
     <div className='search-bar-wrapper'>
       <label className="search-bar">
         <SearchIcon />
-        <input type="text" placeholder='Search in PhoneHouse'/>
+        <input type="text" placeholder={placeholder}/>
       </label>
     </div>
   )
 }
 
-export default Search
+export default SearchBar

@@ -18,7 +18,4 @@ const addNewItem = (url, item) => {
     .then(response => response.data)
 }
 
-export const apiCall = {
-  getAllItems, getSingleItem,
-  addNewItem,
-}
+export const apiCall = { getAllItems, getSingleItem, addNewItem }
