@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useProductList } from 'hooks/useProductList'
 
 import PageTitle from 'components/structures/page-title/PageTitle'
-import SearchBar from '../../components/structures/search-bar/SearchBar'
+import SearchBar from '../../components/ui/search-bar/SearchBar'
 import ItemsList from './items-list/ItemsList'
 
 

@@ -9,7 +9,10 @@ const Cart = ({ content }) => {
   return (
     <div className="cart__wrapper">
       <Icon classes="cart__icon" icon={faCartShopping} />
-      {content && <span className='cart__badge'>{content.length}</span>}
+      {content &&
+        <div className='cart__badge'>
+          <span>{content.length}</span>
+        </div>}
     </div>
   )
 }

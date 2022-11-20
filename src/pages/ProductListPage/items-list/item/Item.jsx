@@ -1,4 +1,3 @@
-import './Item.scss'
 import Image from 'components/ui/image/Image'
 
 const currency = '€'
