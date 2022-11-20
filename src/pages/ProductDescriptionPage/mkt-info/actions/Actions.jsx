@@ -1,4 +1,4 @@
-import Button from 'components/button/Button'
+import Button from 'components/ui/button/Button'
 import Selector from './Selector'
 
 const Actions = ({ id, colors, memory, status }) => {
@@ -33,7 +33,7 @@ const Actions = ({ id, colors, memory, status }) => {
       />
       
       { status && <p className='product-actions__status'>{status}</p>}
-      <Button label="Add to Cart" action={handleSubmit} classes='button button__cart' />
+      <Button label="Add to Cart" action={handleSubmit} classes='button button__checkout' />
 
     </div>
   )

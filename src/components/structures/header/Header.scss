@@ -1,0 +1,20 @@
+header {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #00254b;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.header {
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.store-logo > img {
+  width: 10rem;
+}

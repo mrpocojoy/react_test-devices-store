@@ -1,7 +1,7 @@
 import './Header.scss'
 
 import { Link } from 'react-router-dom'
-import Logo from 'components/logo/Logo'
+import Logo from 'components/ui/logo/Logo'
 import Cart from './cart/Cart'
 
 

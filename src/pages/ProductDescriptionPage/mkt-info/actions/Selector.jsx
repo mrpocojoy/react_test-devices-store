@@ -1,6 +1,6 @@
 import { removeClassNameFromGroup, toggleClassName } from 'utils/editClassName'
 
-import Button from 'components/button/Button'
+import Button from 'components/ui/button/Button'
 import ColorTag  from './ColorTag'
 
 

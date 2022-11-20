@@ -53,17 +53,26 @@ These are the key milestones to be tracked during this test:
 - Create customHooks to obtain products data.
 
 ### MILESTONE 6 - Enable search bar filtering
-- Create references and methods to filter data @ PLP.
-- Include "back" navigation functionality @ PDP.
+- Provide search bar with methods for keywords filtering
+- Allow filtering by model and/or brand (also simultaneous search)
+
+### MILESTONE 7 - Enable shopping cart actions
+- Provide device customization options with click handling methods.
+- Provide checkout button with click handling method.
+- Create utils to persist cart data in local storage.
+- Create customHook to modify cart data.
 
 ### MILESTONE X - **************
 - ...
 
 
-### EXTRA TASKS - **************
+### EXTRA TASKS / IMPROVEMENTS - **************
+- Include site footer as component
 - Provide random discounts to some products
-- Use badges in PLP to improve some "product's sellability"
+- Use badges in PLP to improve marketing of products
 - Include a cart content modal preview
+- Create a user-friendly alias for product url
+- Scale filtering code to improve searches
 
 
 

@@ -1,4 +1,4 @@
-import Image from 'components/image/Image'
+import Image from 'components/ui/image/Image'
 import Description from './description/Description'
 import Actions from './actions/Actions'
 

@@ -1,36 +1,18 @@
-header {
-  padding: 1rem 0;
-  background-color: #00254b;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
-
-.header {
-  &__content-wrapper {
+.cart {
+  &__wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    flex: 0 0 2rem;
   }
-}
 
-.store-logo > img {
-  width: 10rem;
-}
-
-.cart-toggle {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 0 0 2rem;
-
-  .cart-icon {
+  &__icon {
     width: 1.5rem;
     height: 1.5rem;
     color: white;
   }
 
-  .cart-badge {
+  &__badge {
     width: 1rem;
     height: 1rem;
     line-height: 1rem;

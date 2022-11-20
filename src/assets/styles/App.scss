@@ -4,11 +4,20 @@ $highlightGreen: #00e4c0;
 $appChildrenPadding: 0 5vw;
 $maxAppWidth: 1500px;
 
+$primaryTextColor: black;
 
-.app {
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      background-color: $backgroundGrey;
+      // background-color: $backgroundGrey;
+      width: 100vw;
 
       & > div,
       .header__content-wrapper {
@@ -18,11 +27,6 @@ $maxAppWidth: 1500px;
       }
     }
   }
-}
-
-a {
-  text-decoration: none;
-  color: black
 }
 
 .button {
@@ -35,29 +39,16 @@ a {
   background-color: none;
   border: none;
   border-radius: 3rem;
-  color: black;
+  color: $primaryTextColor;
 
   text-align: center;
   text-decoration: none;
   font-size: 1rem;
 
-  &__cart {
+  &__checkout {
     width: 50%;
     background-color: $highlightGreen;
     color: $mainBlue;
     font-weight: bold;
   }
-}
-
-.back-link {
-  width: max-content;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-
-  text-decoration: none;
-  color: #666;
-  font-size: .9rem;
 }

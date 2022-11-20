@@ -1,0 +1,14 @@
+.gif {
+  &__wrapper {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    height: 0;
+    padding-bottom: 76%;
+    position: relative;
+  }
+
+  &__embed {
+    position: absolute;
+  }
+}

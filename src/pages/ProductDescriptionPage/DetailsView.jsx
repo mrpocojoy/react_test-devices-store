@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useProductInfo } from 'hooks/useProductInfo'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-import BackLink from 'components/back-link/BackLink'
+import BackLink from 'components/ui/back-link/BackLink'
 import MarketingInfo from './mkt-info/MarketingInfo'
 import TechInfo from './tech-info/TechInfo'
 
