@@ -1,5 +1,4 @@
-import { productsBaseUrl } from 'services/api-config'
-import { apiCall } from 'lib/axios'
+import { apiCall, productsBaseUrl } from 'services/api-config'
 
 const getAll  = () => apiCall.getAllItems(productsBaseUrl)
 const getById = ({ id }) => {

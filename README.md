@@ -29,51 +29,60 @@ You don't have to answer all the questions - just the ones relevant to your proj
 These are the key milestones to be tracked during this test:
 
 ### MILESTONE 1 - Setup Workspace
-- Setup basic configuration.
-- Clean project from unnecessary files.
-- Create standard project structure.
+- ✅ Setup basic configuration.
+- ✅ Clean project from unnecessary files.
+- ✅ Create standard project structure.
 
 ### MILESTONE 2 - Connect to API
-- Setup common services information.
-- Get app ready to fetch data from API.
-- Send test REST requests to model responses.
+- ✅ Setup common services information.
+- ✅ Get app ready to fetch data from API.
+- ✅ Send test REST requests to model responses.
 
 ### MILESTONE 3 - Draft main pages / components
-- Design draft for site header.
-- Design draft for Product List page (PLP).
-- Design draft for Product Details page (PDP).
+- ✅ Design draft for site header.
+- ✅ Design draft for Product List page (PLP).
+- ✅ Design draft for Product Details page (PDP).
 
 ### MILESTONE 4 - Navigate through pages
-- Wrap app into React BrowserRouter.
-- Provide navigation functionality to listed items @ PLP.
-- Include "back" navigation functionality @ PDP.
+- ✅ Wrap app into React BrowserRouter.
+- ✅ Provide navigation functionality to listed items @ PLP.
+- ✅ Include "back" navigation functionality @ PDP.
 
 ### MILESTONE 5 - Obtain and persist products data
-- Create utils to persist data in local storage.
-- Create customHooks to obtain products data.
+- ✅ Create utils to persist data in local storage.
+- ✅ Create customHooks to obtain products data.
 
 ### MILESTONE 6 - Enable search bar filtering
-- Provide search bar with methods for keywords filtering
-- Allow filtering by model and/or brand (also simultaneous search)
+- ✅ Provide search bar with methods for keywords filtering
+- ✅ Allow filtering by model and/or brand (also simultaneous search)
 
 ### MILESTONE 7 - Enable shopping cart actions
-- Provide device customization options with click handling methods.
-- Provide checkout button with click handling method.
-- Create utils to persist cart data in local storage.
-- Create customHook to modify cart data.
+- ✅ Provide device customization options with click handling methods.
+- ✅ Provide checkout button with click handling method.
+- ✅ Create utils to persist cart data in local storage.
+- ✅ Create customHook to modify cart data.
+
+### MILESTONE 8 - UX/UI improvements
+- Improve general look and feel @ PDP.
+- Improve alert modal style & contents @ PDP.
+- Create basic structure for tech specs of items @ PDP.
+- Re-structure styles files to -> styles per component.
+
+### MILESTONE 9 - General Optimizations
+- Shift cart management from useState to useReducer.
+- Animate checkout button on click.
+- Animate cart icon on item adding.
 
 ### MILESTONE X - **************
 - ...
 
-
 ### EXTRA TASKS / IMPROVEMENTS - **************
-- Include site footer as component
-- Provide random discounts to some products
-- Use badges in PLP to improve marketing of products
-- Include a cart content modal preview
-- Create a user-friendly alias for product url
-- Scale filtering code to improve searches
-
+- Include site footer as component.
+- Provide random discounts to some products.
+- Use badges in PLP to improve marketing of products.
+- Include a cart content modal preview.
+- Create a user-friendly alias for product url.
+- Scale filtering code to improve searches.
 
 
 ---

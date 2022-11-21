@@ -1,5 +1,4 @@
-import { cartBaseUrl } from 'services/api-config'
-import { apiCall } from 'lib/axios'
+import { apiCall, cartBaseUrl } from 'services/api-config'
 
 const add = (item) => apiCall.addNewItem(cartBaseUrl, item) 
 

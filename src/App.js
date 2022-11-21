@@ -1,13 +1,13 @@
 import 'assets/styles/App.scss'
 
-import { useCartList } from 'hooks/useCartList'
+import { Route, Routes } from 'react-router-dom'
+import { useCartList } from 'hooks/cart/useCartList'
 import { CartContext } from 'context/CartContext'
 
-import DetailsView from 'pages/ProductDescriptionPage/DetailsView'
-import ListView from 'pages/ProductListPage/ListView'
 import Header from 'components/structures/header/Header'
-
-import { Route, Routes } from 'react-router-dom'
+import DetailsView from 'pages/ProductDescription/DetailsView'
+import ListView from 'pages/ProductList/ListView'
+import NotFound from 'pages/NotFound/NotFound'
 
 
 function App() {
@@ -22,6 +22,8 @@ function App() {
         <Routes>
           <Route path='/' element={<ListView />} />
           <Route path='/product/:productId' element={<DetailsView />} />
+          <Route path='*' element={<NotFound />}>
+          </Route>
         </Routes>
       </div>
     </CartContext.Provider>

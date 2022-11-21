@@ -4,9 +4,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
 
   text-decoration: none;
   color: #666;
-  font-size: .9rem;
+  font-size: 1rem;
+
+  transition: all .2s;
+
+  &:hover {
+    color: lighten($color: #666, $amount: 30);
+  }
+
+  &__label {
+    margin: 0 1rem
+  }
 }

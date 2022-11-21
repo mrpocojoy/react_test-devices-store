@@ -28,27 +28,3 @@ $primaryTextColor: black;
     }
   }
 }
-
-.button {
-  margin: 4px 2px;
-  padding: 1rem 3rem;
-
-  cursor: pointer;
-  display: inline-block;
-
-  background-color: none;
-  border: none;
-  border-radius: 3rem;
-  color: $primaryTextColor;
-
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-
-  &__checkout {
-    width: 50%;
-    background-color: $highlightGreen;
-    color: $mainBlue;
-    font-weight: bold;
-  }
-}

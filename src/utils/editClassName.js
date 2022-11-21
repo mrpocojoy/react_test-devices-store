@@ -22,3 +22,8 @@ export const toggleClassName = (element, toggleClass) => {
     ? removeClassNameFromElement(element, toggleClass)
     : addClassNameToElement(element, toggleClass)
 }
+
+export const toggleUniqueClassName = (element, selector, className) => {
+  removeClassNameFromGroup(selector, className)
+  toggleClassName(element, className)
+}

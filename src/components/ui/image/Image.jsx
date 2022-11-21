@@ -1,5 +1,5 @@
-const Image = ({ source, altText }) => (
-  <img className="item-image" src={source} alt={altText} />
+const Image = ({ source, altText, classes }) => (
+  <img className={`${classes}`} src={source} alt={altText} />
 )
 
 export default Image
