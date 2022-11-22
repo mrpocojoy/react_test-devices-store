@@ -4,17 +4,24 @@
     width: 100%;
   }
 
-  &__header {
-    width: 100%;
-    padding: 2rem 3rem 0;
+  &.page-title__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    #page-title {
-      margin: 0;
-      font-size: 2rem;
-    }
-
   }
+
+
+  // // &__header {
+  // //   width: 100%;
+  // //   padding: 2rem 3rem 0;
+  // //   display: flex;
+  // //   justify-content: space-between;
+  // //   align-items: center;
+
+  // //   #page-title {
+  // //     margin: 0;
+  // //     font-size: 2rem;
+  // //   }
+
+  // }
 }

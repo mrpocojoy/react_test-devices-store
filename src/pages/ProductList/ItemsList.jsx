@@ -1,7 +1,7 @@
 import './ItemsList.scss'
 
 import { displaySpinner } from 'utils/customAlerts'
-import Item from './item/Item'
+import Item from './Item'
 import Gif from 'components/ui/gif/Gif'
 
 const ItemsList = ({ products, loading }) => {

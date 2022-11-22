@@ -1,17 +1,53 @@
 header {
   width: 100%;
-  padding: 1rem 0;
-  background-color: #00254b;
   position: sticky;
   top: 0;
   z-index: 9999;
+  background-color: #00254b;
+  padding: 1rem 0;
 }
 
 .header {
-  &__content-wrapper {
+  &__wrapper {
+
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.header-breadcrumbs {
+  &__wrapper {
+    margin: 1.5rem auto;
+    color: #999;
+    font-size: .8rem;
+    width: 100%;
+  }
+
+  &__list {
+    padding: 2rem 0 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child):after {
+      content: ">";
+      padding: .5rem;
+      cursor: pointer;
+    }
+
+    &.active {
+      color: grey;
+    }
+
+    &-icon {
+      margin-right: .5rem;
+    }
+
   }
 }
 

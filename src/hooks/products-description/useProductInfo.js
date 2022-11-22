@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react'
 import { productService } from 'services/product'
 import { browserStorage } from 'utils/localStorage'
 
-export const useProductInfo = (id) => {
+export const useProductInfo = (id) => {  
   const [isLoading, setIsLoading] = useState(false)
   const [productInfo, setProductInfo] = useState({})
   
   useEffect(() => {
+    
+    if (!id)
+      return setProductInfo({})
     
     const lsKey = `test-devices-stores__product-info-${id}`
     const localStorageData = browserStorage.getData(lsKey)
@@ -26,6 +29,7 @@ export const useProductInfo = (id) => {
         })
         .catch(error => console.error(error))
     }
+    
   }, [id])
 
   return { isLoading, productInfo }

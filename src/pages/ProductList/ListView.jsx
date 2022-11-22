@@ -5,7 +5,7 @@ import { useProductList } from 'hooks/products-list/useProductList'
 
 import PageTitle from 'components/structures/page-title/PageTitle'
 import SearchBar from '../../components/ui/search-bar/SearchBar'
-import ItemsList from './items-list/ItemsList'
+import ItemsList from './ItemsList'
 
 
 const ListView = () => {
@@ -29,7 +29,7 @@ const ListView = () => {
   return (
     <div className="products-list__wrapper">
       
-      <PageTitle cp={'products-list'} label="Our Devices">
+      <PageTitle classes={'products-list'} label="Our Devices">
         <SearchBar placeholder="Search in PhoneHouse" actions={handleKeywordsSearch}/>
       </PageTitle>
 

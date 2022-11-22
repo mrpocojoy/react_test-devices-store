@@ -63,13 +63,14 @@ These are the key milestones to be tracked during this test:
 - ✅ Create customHook to modify cart data.
 
 ### MILESTONE 8 - UX/UI improvements
-- Improve general look and feel @ PDP.
-- Improve alert modal style & contents @ PDP.
 - Create basic structure for tech specs of items @ PDP.
-- Re-structure styles files to -> styles per component.
+- Re-structure styles files to styles per component.
+- Improve alert modal style & contents @ PDP.
+- Improve general look and feel @ PDP.
 
 ### MILESTONE 9 - General Optimizations
 - Shift cart management from useState to useReducer.
+- Shift partial components to subcomponents.
 - Animate checkout button on click.
 - Animate cart icon on item adding.
 
@@ -77,12 +78,14 @@ These are the key milestones to be tracked during this test:
 - ...
 
 ### EXTRA TASKS / IMPROVEMENTS - **************
+- ✅ Include a "default route" for HTTP404 - Not found.
+- ✅ Make tech details scroll down smoother.
 - Include site footer as component.
-- Provide random discounts to some products.
 - Use badges in PLP to improve marketing of products.
 - Include a cart content modal preview.
+- Provide random discounts to some products.
 - Create a user-friendly alias for product url.
-- Scale filtering code to improve searches.
+- Reformat code for scalable filtering.
 
 
 ---

@@ -13,18 +13,24 @@ $primaryTextColor: black;
   display: flex;
   flex-direction: column;
   align-content: stretch;
+  scroll-behavior: smooth;
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      // background-color: $backgroundGrey;
       width: 100vw;
 
       & > div,
-      .header__content-wrapper {
+      .header-content {
         max-width: $maxAppWidth;
         padding: $appChildrenPadding;
         margin: 0 auto;
       }
     }
   }
+
+  header > div,
+  header-breadbrumbs > nav {
+    @extend .header-content
+  }
+
 }

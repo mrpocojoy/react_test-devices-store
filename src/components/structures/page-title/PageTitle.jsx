@@ -1,10 +1,10 @@
 import './PageTitle.scss'
 
-const PageTitle = ({ label, ...props }) => {
+const PageTitle = ({ label, classes, ...props }) => {
 
   return (
-    <div className='page-title__wrapper'>
-      <h1 className='page-title__title'>{label}</h1>
+    <div className={`${classes} page-title__wrapper`}>
+      <h1 className={`${classes} page-title__title`}>{label}</h1>
       {props.children}
     </div>
   )

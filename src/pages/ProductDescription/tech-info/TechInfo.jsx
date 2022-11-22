@@ -1,9 +1,11 @@
+import './TechInfo.scss'
+
 import { featureCategories } from 'data/techFeatures'
 import FeaturesCategory from './FeaturesCategory'
 
 const TechInfo = ({ item }) => (
-  <div id="tech-details" className="product-details__tech-info-wrapper">
-    <h3>{item.brand} {item.model} Features</h3>
+  <div className="product-details__tech-info-wrapper">
+    <h3 id="tech-details">{item.brand} {item.model} Features</h3>
     <ul>
       {featureCategories.map(({ label, content }) => (
 

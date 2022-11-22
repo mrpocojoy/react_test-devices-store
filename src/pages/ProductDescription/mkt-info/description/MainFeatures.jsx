@@ -1,7 +1,6 @@
-import FakeAnchor from 'components/ui/anchor/FakeAnchor'
+import { Link } from 'react-scroll'
 import { features, keyFeatures } from 'data/techFeatures'
 import Feature from '../../Feature'
-
 
 const MainFeatures = ({ item }) =>  (
   <div className="main-features__wrapper">
@@ -32,10 +31,17 @@ const MainFeatures = ({ item }) =>  (
       }
     </ul>
 
-    <FakeAnchor classes='main-features__see-more-button' href='#tech-details'>
+    <Link
+      // activeClass="active"
+      to="tech-details"
+      // spy={true}
+      smooth={true}
+      offset={-120}
+      duration={400}
+    >
       More Technical Details
-    </FakeAnchor>
-    
+    </Link>
+
   </div>
 )
 
