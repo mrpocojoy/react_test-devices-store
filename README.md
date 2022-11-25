@@ -62,30 +62,35 @@ These are the key milestones to be tracked during this test:
 - ✅ Create utils to persist cart data in local storage.
 - ✅ Create customHook to modify cart data.
 
-### MILESTONE 8 - UX/UI improvements
-- Create basic structure for tech specs of items @ PDP.
-- Re-structure styles files to styles per component.
-- Improve alert modal style & contents @ PDP.
-- Improve general look and feel @ PDP.
+### MILESTONE 8 - UX/UI improvements (v1)
+- ✅ Create basic structure for tech specs of items @ PDP.
+- ✅ Improve UI and responsiveness @ PLP.
+- ✅ Re-structure styles files to styles per component.
+- ✅ Animate cart icon on item adding.
+- ✅ Animate checkout button on click.
 
-### MILESTONE 9 - General Optimizations
-- Shift cart management from useState to useReducer.
-- Shift partial components to subcomponents.
-- Animate checkout button on click.
-- Animate cart icon on item adding.
+### MILESTONE 9 - UX/UI improvements (v2)
+- ✅ Improve general look and feel + responsiveness @ PLP.
+- ✅ Improve general look and feel + responsiveness @ PDP.
 
-### MILESTONE X - **************
-- ...
+### MILESTONE 10 - General Optimizations (v1)
+- ✅ Shift filter state management to a customHook.
+- ✅ Shift API calls from useState to useReducer.
+
+### MILESTONE 11 - General Optimizations (v2)
+- Dynamic search debouncing.
+- Shift cart state management from useState to useReducer.
 
 ### EXTRA TASKS / IMPROVEMENTS - **************
 - ✅ Include a "default route" for HTTP404 - Not found.
 - ✅ Make tech details scroll down smoother.
-- Include site footer as component.
-- Use badges in PLP to improve marketing of products.
-- Include a cart content modal preview.
+- ✅ Include site footer as component.
+- ✅ Include a cart content modal preview.
+- ↪️Reformat code for scalable filtering.
+- Use badges (campaign, discount...) in PLP to improve marketing of products.
 - Provide random discounts to some products.
+- Keep filtering state when naavigating back @ PLP.
 - Create a user-friendly alias for product url.
-- Reformat code for scalable filtering.
 
 
 ---

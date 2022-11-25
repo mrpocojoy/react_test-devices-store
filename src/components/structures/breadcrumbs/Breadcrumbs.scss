@@ -1,0 +1,40 @@
+/*****
+ *  IMPORTANT NOTE:  
+ *  – Component styled to be hidden for mobile devices
+ ******/
+
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+.header-breadcrumbs__wrapper {
+  @include limit-content-width;
+  color: $spanishGrey;
+
+  @include for-phone-only {
+    display: none
+  }
+}
+
+.header-breadcrumbs__list {
+  @include flex-container(flex-start);
+}
+
+.header-breadcrumbs__item {
+  font-size: .8rem;
+
+  &:not(:last-child):after {
+    content: ">";
+    padding: .5rem;
+    cursor: pointer;
+  }
+
+  &.active {
+    color: $graniteGrey;
+  }
+
+  &-icon {
+    margin-right: .5rem;
+  }
+}

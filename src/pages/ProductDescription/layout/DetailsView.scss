@@ -1,0 +1,34 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+.product-details__wrapper {
+  width: 100%;
+  margin: 2rem auto;
+
+  @include for-phone-only {
+    margin-top: .25rem;
+  }
+}
+
+
+.product-details__back-link-wrapper {
+  @include limit-content-width;
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+
+  .back-link {
+    color: $darkCharcoal;
+    text-align: center;
+
+    &__label {
+      margin: 0.25rem;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: $trueBlue;
+    }
+  }
+}

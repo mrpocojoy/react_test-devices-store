@@ -1,0 +1,59 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+.product-details__marketing-info-wrapper {
+  @include limit-content-width;
+}
+
+.product-details__marketing-info-content {
+  @include main-block-wrapper;
+  @include flex-container(center, stretch, wrap);
+
+  @include for-phone-only {
+    padding: 3rem 1rem;
+  }
+}
+
+
+
+
+/******************************* LEFT COLUMN */
+.product-details__image-column {
+  flex: 1 1 350px;
+  text-align: center;
+
+  img {
+    // @include sticky($headerHeight + 50px);
+    min-width: 250px;
+
+    @include for-phone-only {
+      min-width: 0;
+      display: inline-block;
+      max-height: 300px;
+    }
+  }
+}
+
+
+
+/******************************* RIGHT COLUMN */
+.product-details__info-column {
+  flex: 3;
+  padding: 0 3rem;
+
+  @include for-phone-only {
+    padding: 1rem;
+  }
+}
+
+.product-details__not-available {
+  margin-top: 2rem;
+  color: $softBrown;
+  font-weight: bold;
+
+  @include for-phone-only {
+    text-align: center;
+  }
+}

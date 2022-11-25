@@ -1,0 +1,82 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+.search-bar__wrapper {
+  transition: $longTransition;
+
+  @include for-phone-only {
+    display: none;
+    width: 100%;
+    margin: 1rem auto 0;
+    padding-bottom: 1.5rem;
+    border-bottom: 4px solid $white;
+  }
+}
+
+$labelWidth: 0;
+
+.search-bar__label {
+  position: relative;
+  width: max-content;
+  cursor: text;
+}
+
+.search-bar__icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+
+  font-size: 1.25rem;
+  color: $robbinEggBlue;
+  cursor: pointer;
+}
+
+.search-bar__clear-link {
+  @extend .search-bar__icon;
+  @include reset-all;
+  top: -0.25rem;
+  left: 93%;
+  background-color: transparent;
+
+
+  font-size: 1.25rem;
+
+  &,
+  &:visited {
+    color: $spanishGrey;
+  }
+
+  &:hover {
+    color: $red;
+  }
+
+  @include for-phone-only {
+    left: 91%;
+  }
+}
+
+
+.search-bar__mobile-toggle {
+  display: none;
+
+  @include for-phone-only {
+    display: block;
+  }
+}
+
+.search-bar__input {
+  @include size(30vw, 60px);
+  min-width: 350px;
+
+  padding: 5px 20px 5px 60px;
+
+  border: 2px solid $white;
+  border-radius: 10px;
+  font-size: 1.15rem;
+
+  @include for-phone-only {
+    @include size(100%, 45px)
+  }
+}

@@ -1,14 +1,12 @@
-.page-title {
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
 
-  &__wrapper {
-    padding: 2rem 0 1rem;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: space-evenly;
-    align-items: center;
+.page-title__wrapper {
+  @include flex-container(space-between, center, wrap);
+  padding: 2rem 0;
 
-    &__title {
-      font-size: 23rem;
-    }
+  @include for-phone-only {
+    padding-bottom: 1rem;
   }
 }

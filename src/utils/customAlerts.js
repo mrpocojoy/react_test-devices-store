@@ -1,4 +1,4 @@
-import { hideAlert, showLoading, showAlert } from 'lib/sweetAlert2/sweetAlert2'
+import { hideAlert, showLoading, showAlert } from 'libraries/sweetAlert2'
 
 export const warningAlert = ({ title, text, showConfirmButton, confirmButton, showDenyButton, denyButton, showCancelButton, cancelButton }) => {
   const params = {
@@ -32,14 +32,29 @@ export const infoAlert = ({ title, text, showConfirmButton, confirmButton, showD
   showAlert(params)
 }
 
+export const genericAlert = ({ title, text, showConfirmButton, confirmButton, showDenyButton, denyButton, showCancelButton, cancelButton }) => {
+  const params = {
+    title: title || 'Hej!',
+    text: text,
+    icon: '',
+    showConfirmButton: showConfirmButton || true,
+    confirmButtonText: confirmButton || 'Okay',
+    showDenyButton: showDenyButton || false,
+    denyButtonText: denyButton || 'No',
+    showCancelButton: showCancelButton || false,
+    cancelButtonText: cancelButton || 'Cancel',
+  }
+
+  showAlert(params)
+}
+
 
 // success
 // error
-// info
 // question
 
 
-export const displaySpinner = () => {
+export const displaySpinner = (delay=500) => {
   showLoading()
-  setTimeout(hideAlert, 500)
+  setTimeout(hideAlert, delay)
 }

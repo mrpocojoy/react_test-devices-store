@@ -1,0 +1,88 @@
+/***********************************
+  SCREEN SIZES
+***********************************/
+
+//------------------------  Desktop
+$minDesktop: 1024px;
+//------------------------  Tablet
+$minTabletPortrait: 768px;
+$maxTabletPortrait: $minDesktop - 1px;
+//------------------------  Phone
+$maxPhonePortrait: 480px;
+
+
+/***********************************
+  COLORS  
+***********************************/
+
+//------------------------  Theme
+$oxfordBlue: #00254b;
+$trueBlue: #005bcb;
+$robbinEggBlue: #00e4c0;
+$softBrown: #B7825F;
+$red: #FF0000;
+
+//------------------------  Grey
+$darkCharcoal: #333333;
+$spanishGrey: #999999;
+$graniteGrey: #666666;
+$x11Grey: #bbbbbb;
+$gainsboroGrey: #dddddd;
+$brightGrey: #eeeeee;
+
+//------------------------  BW
+$black: #000000;
+$white: #ffffff;
+
+
+
+/***********************************
+  COMPOUND STYLES
+***********************************/
+
+//------------------------  Shadows
+$lightShadow: 0 0 3px $darkCharcoal;
+$darkShadow: 0 0 3px $black;
+
+//------------------------  Borders
+$softGreyBorder: 1px solid $gainsboroGrey;
+$brightBlueBorder: 1px solid $trueBlue;
+
+//------------------------  Transitions
+$defaultTransition: all .2s;
+$longTransition: all 1s;
+
+
+
+/***********************************
+  FONTS
+***********************************/
+
+//------------------------  Sizes
+$defaultTextSize: 16px;
+
+//------------------------  Families
+$poppins: 'Poppins', Arial, Helvetica, sans-serif;
+$sourceCode: source-code-pro, Menlo, Monaco, Consolas, monospace;
+
+
+
+/***********************************
+  LAYOUT CONSTANTS  
+***********************************/
+
+//------------------------  App
+$maxContentWidth: 1600px;
+$contentVerticalMargin: 20px;
+$contentHorizontalPadding: 20px;
+
+$appBackgroundColor: $brightGrey;
+
+$primaryColor: $trueBlue;
+$secondaryColor: $white;
+$highlightColor: $robbinEggBlue;
+
+//------------------------  Header
+$headerHeight: 80px;
+//------------------------  Footer
+$footerHeight: 80px;

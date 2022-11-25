@@ -1,0 +1,87 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+.item__wrapper {
+  flex: 1 0 280px;
+}
+
+.item__link {
+  display: block;
+  @include size;
+
+  background-color: $white;
+  border-radius: 1rem;
+
+  padding: 3rem 1rem 1rem;
+  text-align: center;
+  transition: $defaultTransition;
+
+  &:hover {
+    box-shadow: $lightShadow;
+  }
+
+  @include for-phone-only {
+    @include flex-container(flex-start);
+    padding: 1rem 2rem;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.item__photo {
+  @include size(170px, 250px);
+  object-fit: contain;
+
+  @include for-phone-only {
+    @include size(100px, 100px);
+    object-fit: contain;
+  }
+}
+
+
+.item__info {
+  margin: 1rem auto;
+  text-align: center;
+
+  @include for-phone-only {
+    margin-left: 20px;
+    text-align: left;
+    font-size: .9rem;
+
+    &-price {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.item__info-title {
+  margin: 0;
+  height: 4rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  word-wrap: break-word;
+
+  @include for-phone-only {
+    height: auto;
+  }
+}
+
+.item__info-price {
+  color: $trueBlue;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2rem;
+
+  @include for-phone-only {
+    font-size: 1.5rem;
+  }
+
+  &.no-price {
+    color: $x11Grey;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+}

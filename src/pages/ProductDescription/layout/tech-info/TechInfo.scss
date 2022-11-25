@@ -1,0 +1,48 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+.product-details__tech-info-wrapper {
+  @include limit-content-width;
+  background-color: $white;
+}
+
+.product-details__tech-info-inner {
+  @include main-block-wrapper;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.product-details__tech-info-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.product-details__tech-info-content {
+  position: relative;
+  @include flex-container(space-between, flex-start, wrap);
+
+  & > ul {
+    @include reset-list;
+    @include inline-block-container(2, 30px, no-wrap);
+
+    @include for-phone-only {
+      @include inline-block-container(1, 30px, wrap);
+    }
+  }
+}
+
+.product-details__tech-info-image-wrapper {
+  // @include sticky($headerHeight + 50px);
+  margin: 0 auto;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+  & > img {
+    width: 200px;
+  }
+}

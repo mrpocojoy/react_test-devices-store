@@ -1,0 +1,33 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+.not-found__wrapper {
+  @include limit-content-width;
+  @include flex-container;
+  flex-direction: column;
+}
+
+.not-found__image {
+  width: 30%;
+  max-width: 600px;
+
+  @include for-portable-only {
+    width: 350px;
+  }
+}
+
+.not-found__button {
+
+  &-wrapper {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  &-link {
+    @include default-button;
+    background-color: $graniteGrey;
+    color: $white;
+  }
+}

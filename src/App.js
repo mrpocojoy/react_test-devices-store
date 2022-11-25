@@ -1,17 +1,17 @@
-import 'assets/styles/App.scss'
-
 import { Route, Routes } from 'react-router-dom'
-import { useCartList } from 'hooks/cart/useCartList'
+import { useCartList } from 'hooks/useCartList'
 import { CartContext } from 'context/CartContext'
 
-import Header from 'components/structures/header/Header'
-import DetailsView from 'pages/ProductDescription/DetailsView'
-import ListView from 'pages/ProductList/ListView'
-import NotFound from 'pages/NotFound/NotFound'
+import Header from 'components/layout/header/Header'
+import DetailsView from 'pages/ProductDescription/layout/DetailsView'
+import ListView from 'pages/ProductList/layout/ListView'
+import NotFound from 'pages/NotFound/layout/NotFound'
+import Footer from 'components/layout/footer/Footer'
 
 
 function App() {
 
+  /*  Cart content status and updating method accessible from context  */
   const { cartContent, addCartItem } = useCartList()
 
   return (
@@ -19,12 +19,18 @@ function App() {
       <div className="App">
         <Header />
 
-        <Routes>
-          <Route path='/' element={<ListView />} />
-          <Route path='/product/:productId' element={<DetailsView />} />
-          <Route path='*' element={<NotFound />}>
-          </Route>
-        </Routes>
+        <article className="App__content">
+          
+          <Routes>
+            <Route path='/' element={<ListView />} />
+            <Route path='/product/:productId' element={<DetailsView />} />
+            <Route path='*' element={<NotFound />}>
+            </Route>
+          </Routes>
+
+        </article>
+
+        <Footer />
       </div>
     </CartContext.Provider>
   )

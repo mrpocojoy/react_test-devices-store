@@ -1,0 +1,39 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_typography';
+@import 'assets/styles/sass/_mixins';
+
+
+* {
+  @include reset-all
+}
+
+body {
+  width: 100%;
+  font-family: $poppins;
+  color: $defaultTextColor;
+  background-color: $appBackgroundColor;
+  scroll-behavior: smooth;
+}
+
+.App__content {
+  @include flex-container(space-between);
+  flex-direction: column;
+
+  min-height: 100vh;
+  overflow-x: none;
+}
+
+
+
+
+
+
+code {
+  font-family: $sourceCode;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $defaultTextColor;
+}

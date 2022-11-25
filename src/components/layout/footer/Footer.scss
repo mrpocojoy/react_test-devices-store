@@ -1,0 +1,30 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+
+
+footer {
+  @include size(100%, $footerHeight);
+  margin-top: $contentVerticalMargin;
+  background-color: $oxfordBlue;
+}
+
+.footer__wrapper {
+  @include limit-content-width;
+  @include flex-container;
+}
+
+.footer__link {
+  color: $white;
+
+  img {
+    transition: $defaultTransition;
+  }
+
+  &:hover img {
+    transform: scale(1.5);
+  }
+}
+
+.footer__icon {
+  padding: 0 1rem;
+}

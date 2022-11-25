@@ -1,0 +1,41 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+
+.products-list__wrapper {
+  @include limit-content-width;
+}
+
+.products-list__title.page-title__wrapper {
+  @include flex-container(space-between);
+
+  background-color: $appBackgroundColor;
+
+  @include for-phone-only {
+    @include sticky($headerHeight);
+    padding-top: 1rem;
+    padding-bottom: 0;
+  }
+}
+
+.products-list__empty {
+  padding: 3rem;
+  background-color: $white;
+  border-radius: 1rem;
+
+  @include for-phone-only {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+
+.products-list__content {
+  @include flex-container(space-between, stretch, wrap);
+  @include reset-list;
+  margin: 2rem auto;
+}

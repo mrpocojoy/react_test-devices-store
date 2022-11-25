@@ -1,0 +1,38 @@
+.swal2 {
+  // &-modal {}
+
+  // &-icon {
+
+  // ...
+  // &--error {}
+
+  // &--success {}
+
+  // &--warning {}
+  // }
+
+  // &-title {}
+
+  &-html-container {
+    margin: 1.5rem auto 1rem;
+    width: 80%;
+    text-align: justify;
+  }
+
+  &-actions {
+    width: 80%;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
+    .swal2-styled[type="button"] {
+      display: block;
+
+      // & .swal--confirm {}
+
+      // & .swal--deny {}
+
+      // & .swal--cancel {}
+
+    }
+  }
+}

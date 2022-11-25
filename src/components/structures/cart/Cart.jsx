@@ -1,11 +1,11 @@
 import './Cart.scss'
 
-import Icon from 'components/ui/icon/Icon'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useContext } from 'react'
 import { CartContext } from 'context/CartContext'
-import { infoAlert } from 'utils/customAlerts'
-import FakeAnchor from 'components/ui/anchor/FakeAnchor'
+import { genericAlert } from 'utils/customAlerts'
+
+import Icon from 'components/ui/icon/Icon'
+import FakeAnchor from 'components/ui/custom-anchor/CustomAnchor'
 
 
 const Cart = () => {
@@ -13,17 +13,20 @@ const Cart = () => {
   const { cartContent } = useContext(CartContext)
   const badgeLabel = cartContent.length || false
 
+  const wrapperClassNames = `cart__wrapper ${(!cartContent.length) && 'empty'}`
+
   const cartAction = () => {
-    infoAlert({
+    genericAlert({
       title: 'Cart Content',
       text: JSON.stringify(cartContent),
     })
   }
+
   return (
-    <div className="cart__wrapper">
+    <div className={wrapperClassNames}>
       <FakeAnchor action={cartAction}>
         
-        <Icon classes="cart__icon" icon={faCartShopping} />
+        <Icon classes="cart__icon" iconName="faCartShopping" />
 
         {
           badgeLabel &&

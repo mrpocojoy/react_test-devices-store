@@ -1,24 +1,18 @@
-.button {
-  min-width: max-content;
-  margin: 4px 2px;
-  padding: 1rem 3rem;
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
 
-  cursor: pointer;
-  display: inline-block;
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+input[type="file"] > input[type="button"] {
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+  @include default-button;
+}
 
-  background-color: none;
-  border: none;
-  border-radius: 3rem;
-  color: black;
-
-  text-align: center;
-  text-decoration: none;
-  font-size: 1rem;
-
-  transition: all .2s;
-
-
-  &:hover {
-    background-color: #eee;
-  }
+.button > .custom-icon {
+  pointer-events: none;
 }

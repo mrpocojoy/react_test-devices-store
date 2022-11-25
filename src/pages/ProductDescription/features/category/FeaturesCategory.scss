@@ -1,0 +1,48 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+
+
+.tech-info-category__wrapper {
+  max-width: 450px;
+  margin-bottom: 1rem;
+
+  ul {
+    @include reset-list;
+  }
+}
+
+.tech-info-category__title {
+  font-size: 16px;
+  padding: 10px 0 5px;
+  font-weight: bold;
+}
+
+.tech-info-category__content {
+  .feature__wrapper {
+    @include size;
+    padding: .5rem 0;
+  }
+
+  .feature__info-wrapper {
+    @include flex-container(flex-start, center, wrap, 0);
+  }
+
+  .feature__title,
+  .feature__description {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  $titleWidth: 30%;
+
+  .feature__title {
+    width: $titleWidth;
+    color: $spanishGrey;
+    padding-left: 10px;
+  }
+
+  .feature__description {
+    width: calc(100% - $titleWidth);
+  }
+}

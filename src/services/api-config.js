@@ -1,4 +1,4 @@
-import { apiCall } from 'lib/axios'
+import { apiCall } from 'libraries/axios'
 
 const serverUrl = 'https://front-test-api.herokuapp.com'
 const apiSlug = '/api'

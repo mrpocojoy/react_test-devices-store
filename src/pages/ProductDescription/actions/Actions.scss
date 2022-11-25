@@ -1,0 +1,31 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+
+.product-actions__title {
+  margin: 1rem 0 .5rem;
+}
+
+.product-actions__checkout-wrapper {
+  margin-top: 3rem;
+}
+
+.product-actions__status {
+  margin: 1rem 0 .5rem;
+  font-size: .75rem;
+}
+
+.product-actions__checkout-button {
+  @include custom-button($black, $robbinEggBlue, '', $darkCharcoal);
+  width: 50%;
+
+  @include for-phone-only {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+.product-actions__checkout-wrapper > .loader {
+  @include loading-animation;
+}

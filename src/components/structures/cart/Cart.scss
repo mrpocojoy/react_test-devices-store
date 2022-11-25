@@ -1,43 +1,52 @@
-.cart {
-  &__wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: max-content;
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
 
-    transition: all .2s;
+.cart__wrapper {
+  position: relative;
+  @include flex-container(flex-start);
+  width: max-content;
+  padding-right: 1.15rem;
 
-    &:hover {
-      opacity: 85%;
-      cursor: pointer;
+  @include for-phone-only {
+    padding-right: 0.15rem;
+
+    &:not(.empty) {
+      padding-right: 1.5rem;
     }
   }
 
-  &__icon {
-    font-size: 1.5rem;
-    color: white;
-    background-color: none;
+  &:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
   }
+}
 
-  &__badge {
-    position: absolute;
-    top: -.75rem;
-    right: -1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cart__icon {
+  font-size: 1.5rem;
+  color: $white;
+  transition: $defaultTransition;
+}
 
-    width: 1.5rem;
-    height: 1.5rem;
+.cart__badge {
+  position: absolute;
+  top: -.75rem;
+  right: -.25rem;
 
-    padding: .3rem;
-    text-align: center;
+  @include flex-container;
+  @include size(1.75rem, 1.75rem);
 
-    font-size: .9rem;
-    font-weight: bolder;
-    color: white;
+  padding: .5rem;
+  text-align: center;
 
-    background-color: #00e4c0;
-    border-radius: 5rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: $white;
+
+  background-color: $robbinEggBlue;
+  border-radius: 5rem;
+
+  @include for-phone-only {
+    right: .15rem;
   }
 }

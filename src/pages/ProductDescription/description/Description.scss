@@ -1,0 +1,26 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+.product-description__title {
+  font-size: 2.5rem;
+
+  @include for-phone-only {
+    font-size: 1.5rem;
+  }
+}
+
+.product-description__price {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: $trueBlue;
+}
+
+.product-description__price.no-price {
+  color: $x11Grey;
+  font-size: 1rem;
+  line-height: 2rem;
+  padding: .5rem 0;
+  font-weight: normal;
+}

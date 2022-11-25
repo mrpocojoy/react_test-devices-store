@@ -1,0 +1,188 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_animations';
+
+
+/*  ---------------------------------- Clear Default Styles  */
+@mixin reset-all {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+/*  ---------------------------------- Clear List Defaults  */
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/*  ---------------------------------- Use Total Parent Size */
+@mixin size($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+}
+
+
+/*  ---------------------------------- Sticky (All Browsers)  */
+@mixin sticky($offset: 0) {
+  position: -webkit-sticky;
+  position: sticky;
+  top: $offset;
+}
+
+
+/*  ---------------------------------- Custom Flex Container */
+@mixin flex-container($justify: center,
+  $align: center,
+  $wrap: no-wrap,
+  $gap: 15px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+
+/*  ---------------------------------- Custom Flex Container */
+@mixin inline-block-container($colsCount: 1,
+  $colsGap: 10px, $wrap: no-wrap) {
+  display: inline-block;
+  column-count: $colsCount;
+  column-gap: $colsGap;
+  white-space: $wrap;
+  overflow: ($wrap==no-wrap) and hidden;
+}
+
+
+/*  ---------------------------------- Default Buttons  */
+@mixin default-button {
+  display: inline-block;
+  min-width: max-content;
+  padding: 1rem 3rem;
+
+  border-radius: 10px;
+  border-width: 0px;
+  border-style: solid;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: $defaultTextSize;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: $defaultTransition;
+}
+
+
+/*  ---------------------------------- Custom Button  */
+@mixin custom-button($fontColor, $backgroundColor, $borderColor: $backgroundColor, $shadowColor: $backgroundColor) {
+  @include default-button;
+  border-radius: 30px;
+  background-color: $backgroundColor;
+  border-color: $borderColor;
+  color: $fontColor;
+
+  &:hover {
+    box-shadow: 0 0 3px $shadowColor;
+  }
+}
+
+
+/*  ---------------------------------- OFF Selector Buttons  */
+@mixin disabled-selector-button {
+  @include default-button;
+
+  padding: 7px 11px;
+  border-radius: 5px;
+
+  background-color: $white;
+  border: $softGreyBorder;
+  color: $graniteGrey;
+  font-weight: normal;
+
+  &:hover {
+    border-color: $trueBlue;
+  }
+}
+
+
+/*  ---------------------------------- ON Selector Buttons  */
+@mixin enabled-selector-button {
+  @include disabled-selector-button;
+  border: $brightBlueBorder;
+  color: $trueBlue;
+  font-weight: bold;
+}
+
+
+/*  ---------------------------------- Pages content wrapper  */
+@mixin limit-content-width {
+  @include size;
+  max-width: $maxContentWidth;
+  padding: 0 5vw;
+  margin: 0 auto;
+}
+
+/*  ---------------------------------- Pages sections wrapper  */
+@mixin main-block-wrapper {
+  background-color: $white;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  padding: 4rem;
+}
+
+/*  ---------------------------------- Loading Animation  */
+@mixin loading-animation {
+  display: none;
+  font-size: 0.0rem;
+  padding: 0;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: $white;
+  border: 3px solid $robbinEggBlue;
+  border-right: 5px solid $white;
+  animation: loader .8s linear infinite;
+}
+
+/*  ---------------------------------- Loading Ellipsis Animation  */
+@mixin loading-ellipsis-animation {
+  display: inline-block;
+  position: relative;
+  @include size(80px, 80px);
+
+  & div {
+    position: absolute;
+    top: 33px;
+
+    @include size(13px, 13px);
+    border-radius: 50%;
+    background-color: $primaryColor;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+  & div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+
+  & div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  & div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+
+  & div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+}

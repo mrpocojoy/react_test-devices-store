@@ -1,4 +1,4 @@
-export const keyFeatures = ['cpu', 'ram', 'os', 'battery', 'primaryCamera', 'secondaryCmera', 'dimentions', 'weight', 'displayResolution']
+export const keyFeatures = ['cpu', 'ram', 'os', 'battery', ['primaryCamera', 'secondaryCmera'], 'dimentions', 'weight', 'displayResolution']
 
 
 export const featureCategories = [
@@ -7,16 +7,8 @@ export const featureCategories = [
     content: ['displayResolution', 'displaySize', 'displayType']
   }, 
   {
-    label: 'Camera',
+    label: 'Cameras',
     content: ['primaryCamera', 'secondaryCmera']
-  }, 
-  {
-    label: 'Memory & Storage',
-    content: ['internalMemory', 'externalMemory', 'ram']
-  }, 
-  {
-    label: 'Processor',
-    content: ['cpu', 'chipset', 'gpu']
   }, 
   {
     label: 'Operating System',
@@ -27,8 +19,16 @@ export const featureCategories = [
     content: ['battery']
   }, 
   {
+    label: 'Memory & Storage',
+    content: ['internalMemory', 'externalMemory']
+  }, 
+  {
     label: 'Connecting Ports',
     content: ['usb']
+  }, 
+  {
+    label: 'Processor',
+    content: ['cpu', 'ram', 'chipset', 'gpu']
   }, 
   {
     label: 'Sensors',
@@ -46,81 +46,81 @@ export const featureCategories = [
 
 export const features = {
   displayResolution: {
-    label: 'Display Resolution', iconSrc: '',
+    label: 'Resolution', icon: { iconName:'faSquare', prefix:'' },
   },
   displaySize: {
-    label: 'Display Size', iconSrc: '',
+    label: 'Size', icon: { iconName:'', prefix:'' },
   },
   displayType: {
-    label: 'Display Type', iconSrc: '',
+    label: 'Type', icon: { iconName:'', prefix:'' },
   },
   primaryCamera: {
-    label: 'Primary Camera', iconSrc: '', splitter: ' with '
+    label: 'Main', icon: { iconName:'faCameraRetro', prefix:'' }, splitter: ' with ', cat: 'Cameras'
   },
   secondaryCmera: {
-    label: 'Secondary Camera', iconSrc: '', splitter: ' with '
+    label: 'Selfie', icon: { iconName:'faCameraRetro', prefix:'' }, splitter: ' with '
   },
   internalMemory: {
-    label: 'Internal Memory', iconSrc: '', splitter: ' / '
+    label: 'Internal Memory', icon: { iconName:'', prefix:'' }, splitter: ' / '
   },
   externalMemory: {
-    label: 'External Memory', iconSrc: '',
+    label: 'External Memory', icon: { iconName:'', prefix:'' },
   },
   ram: {
-    label: 'RAM', iconSrc: '',
+    label: 'RAM', icon: { iconName:'faMemory', prefix:'' },
   },
   cpu: {
-    label: 'Processor', iconSrc: '',
+    label: 'Processor', icon: { iconName:'faMicrochip', prefix:'' },
   },
   chipset: {
-    label: 'Chipset', iconSrc: '',
+    label: 'Chipset', icon: { iconName:'', prefix:'' },
   },
   gpu: {
-    label: 'GPU', iconSrc: '',
+    label: 'GPU', icon: { iconName:'', prefix:'' },
   },
   os: {
-    label: 'Operating System', iconSrc: '',
+    label: 'Operating System', icon: { iconName:'faMobile', prefix:'' },
   },
   battery: {
-    label: 'Battery', iconSrc: '',
+    label: 'Battery', icon:  { iconName:'faBatteryThreeQuarters', prefix:'' },
   },
   usb: {
-    label: 'USB', iconSrc: '',
+    label: 'USB', icon: { iconName:'', prefix:'' },
   },
   sensors: {
-    label: 'Sensors', iconSrc: '', splitter: ' & '
+    label: 'Sensors', icon: { iconName:'', prefix:'' }, splitter: ' & '
   },
   networkTechnology: {
-    label: 'Network Technology', iconSrc: '',
+    label: 'Technology', icon: { iconName:'', prefix:'' },
   },
   networkSpeed: {
-    label: 'Network Speed', iconSrc: '',
+    label: 'Speed', icon: { iconName:'', prefix:'' },
   },
   sim: {
-    label: 'SIM', iconSrc: '',
+    label: 'SIM', icon: { iconName:'', prefix:'' },
   },
   gprs: {
-    label: 'GPRS', iconSrc: '',
+    label: 'GPRS', icon: { iconName:'', prefix:'' },
   },
   edge: {
-    label: 'EDGE', iconSrc: '',
+    label: 'EDGE', icon: { iconName:'', prefix:'' },
   },
   gps: {
-    label: 'GPS', iconSrc: '',
+    label: 'GPS', icon: { iconName:'', prefix:'' },
   },
   wlan: {
-    label: 'WLAN', iconSrc: '',
+    label: 'WLAN', icon: { iconName:'', prefix:'' },
   },
   bluetooth: {
-    label: 'Bluetooth', iconSrc: '',
+    label: 'Bluetooth', icon: { iconName:'', prefix:'' },
   },
   nfc: {
-    label: 'NFC', iconSrc: '',
+    label: 'NFC', icon: { iconName:'', prefix:'' },
   },
   dimentions: {
-    label: 'Dimensions', iconSrc: '',
+    label: 'Dimensions', icon: { iconName:'faUpRightAndDownLeftFromCenter', prefix:'' }, 
   },
   weight: {
-    label: 'Weight', iconSrc: '', units: 'gr.'
+    label: 'Weight', icon: { iconName:'faWeightHanging', prefix:'' }, units: 'gr.'
   },
 }

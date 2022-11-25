@@ -1,10 +1,11 @@
 import './BackLink.scss'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useNavigate } from 'react-router-dom'
-import FakeAnchor from '../anchor/FakeAnchor'
 
-const BackLink = ({ label, icon, labelFirst=false }) => {
+import CustomAnchor from '../custom-anchor/CustomAnchor'
+import Icon from '../icon/Icon'
+
+const BackLink = ({ label, icon, classes='', labelFirst=false }) => {
 
   const navigate = useNavigate()
   const linkStyle = (labelFirst)
@@ -12,17 +13,20 @@ const BackLink = ({ label, icon, labelFirst=false }) => {
     : {} 
   
   return (
-    <FakeAnchor
+    <CustomAnchor
       classes="back-link"
       styles={linkStyle}
       action={() => navigate(-1)}    
     >
-      {icon && <FontAwesomeIcon className="back-link__icon" icon={icon} />}
+      {
+        icon &&
+        <Icon className={`${classes} back-link__icon`} iconName={icon} />
+      }
       
-      <span className="back-link__label">
+      <span className={`${classes} back-link__label`}>
         {label}
       </span>
-    </FakeAnchor>
+    </CustomAnchor>
 
   )
 }

@@ -1,0 +1,25 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+@import 'assets/styles/sass/_media-mixins';
+
+header {
+  @include sticky;
+  top: 0;
+  z-index: 9999;
+
+  @include size(100%, $headerHeight);
+  margin-bottom: $contentVerticalMargin;
+
+  background-color: $oxfordBlue;
+  padding: 1rem 0;
+}
+
+.header__wrapper {
+  @include limit-content-width;
+  @include flex-container(space-between);
+}
+
+
+.store-logo > img {
+  width: 10rem;
+}

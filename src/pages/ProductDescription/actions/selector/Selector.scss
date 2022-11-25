@@ -1,0 +1,38 @@
+@import 'assets/styles/sass/_variables';
+@import 'assets/styles/sass/_mixins';
+
+
+.selector__list {
+  @include flex-container(flex-start, center, wrap, 5px);
+  @include reset-list;
+  margin-bottom: .5rem;
+}
+
+
+.selector__list-item {
+  max-width: max-content;
+  padding: 0;
+  flex: 1 1 100px;
+
+  .button {
+    @include disabled-selector-button;
+    @include flex-container(flex-start, center, no-wrap, 8px);
+
+    // Color Selection Options
+    .item-color-tag {
+      @include size(30px, 30px);
+      pointer-events: none;
+      border-radius: 50rem;
+      border: $softGreyBorder;
+    }
+
+    &.active {
+      color: black;
+      border: 2px solid $trueBlue;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+}

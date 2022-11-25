@@ -1,0 +1,25 @@
+@use 'assets/styles/sass/_variables';
+
+@mixin for-desktop-only {
+  @media screen and (min-width: $minDesktop) {
+    @content;
+  }
+}
+
+@mixin for-portable-only {
+  @media screen and (max-width: $maxTabletPortrait) {
+    @content;
+  }
+}
+
+@mixin for-tablet-only {
+  @media screen and (min-device-width: $minTabletPortrait) and (max-device-width: $maxTabletPortrait) {
+    @content;
+  }
+}
+
+@mixin for-phone-only {
+  @media screen and (max-width: $maxPhonePortrait) {
+    @content;
+  }
+}
