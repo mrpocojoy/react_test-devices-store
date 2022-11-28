@@ -2,7 +2,7 @@ import { useEffect, useReducer } from 'react'
 import { productService } from 'services/product'
 import { browserStorage } from 'utils/localStorage'
 
-import { apiCallReducer, initialState, actionTypes } from 'store/reducers/apiCallReducer'
+import { apiCallReducer, initialState, actionTypes } from 'reducers/apiCallReducer'
 
 export const useProductInfo = (id) => {  
 
@@ -35,7 +35,7 @@ export const useProductInfo = (id) => {
       .then(result => {
         browserStorage.saveData(LS_KEY, result)
         dispatch({ type: actionTypes.API_CALL_SUCCESS, data: result })
-        return console.log(result)
+        return //console.log(result)
       })
       .catch(error => {
         dispatch({ type:actionTypes.API_CALL_FAILED, error })

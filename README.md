@@ -75,18 +75,21 @@ These are the key milestones to be tracked during this test:
 
 ### MILESTONE 10 - General Optimizations (v1)
 - ✅ Shift filter state management to a customHook.
-- ✅ Shift API calls from useState to useReducer.
+- ✅ Shift product list states management to reducer.
+- ✅ Shift product info states management to reducer.
 
 ### MILESTONE 11 - General Optimizations (v2)
+- ✅ Shift cart states management to reducer.
+
+### MILESTONE 12 - General Optimizations (v3)
 - Dynamic search debouncing.
-- Shift cart state management from useState to useReducer.
 
 ### EXTRA TASKS / IMPROVEMENTS - **************
 - ✅ Include a "default route" for HTTP404 - Not found.
 - ✅ Make tech details scroll down smoother.
 - ✅ Include site footer as component.
 - ✅ Include a cart content modal preview.
-- ↪️Reformat code for scalable filtering.
+- ↪️ Reformat code for scalable filtering.
 - Use badges (campaign, discount...) in PLP to improve marketing of products.
 - Provide random discounts to some products.
 - Keep filtering state when naavigating back @ PLP.

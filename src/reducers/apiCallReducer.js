@@ -6,7 +6,7 @@ export const actionTypes = {
 
 /*  Initial state for reducer  */
 export const initialState = {
-  data: '',
+  data: [],
   isLoading: false,
   error: null
 }
@@ -14,6 +14,7 @@ export const initialState = {
 
 /*  Reducer aux functions  */
 const unknownAction = (state, action) => {
+  console.log('Unknown Action Type: ', action.type)
   return { ...state }
 }
 const apiCallStarted = (state, action) => {
@@ -38,6 +39,6 @@ export const apiCallReducer = (state, action) => {
   case actionTypes.API_CALL_FAILED: 
     return apiCallFailed(state, action)
   default:
-    return unknownAction    
+    return unknownAction(state, action)    
   }
 }
