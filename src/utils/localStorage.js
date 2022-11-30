@@ -1,6 +1,11 @@
 const defaultTTL = 3600000
 
 const saveData = (key, value, ttl) => {
+  if (typeof (Storage) === 'undefined') {
+    console.error('Impossible to save. Storage not compatible')
+    return null  
+  }
+
   const expiry = new Date().getTime() + (ttl ?? defaultTTL)
   
   window.localStorage.setItem(
@@ -9,6 +14,11 @@ const saveData = (key, value, ttl) => {
 }
 
 const getData = (key) => {
+  if (typeof (Storage) === 'undefined') {
+    console.error('Impossible to load. Storage not compatible')
+    return null  
+  }
+
   const storedStr = window.localStorage.getItem(key)
 
   if (!storedStr)

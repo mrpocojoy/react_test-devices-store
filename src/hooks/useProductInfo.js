@@ -16,7 +16,7 @@ export const useProductInfo = (id) => {
   useEffect(() => {
 
     if (!id)
-      return console.log('Waiting for props to be ready (id) ->', id)
+      return //console.log('Waiting for props to be ready (id) ->', id)
 
     //  SEARCHING FOR PRODUCTS LIST @ LOCAL STORAGE
     /*  Gets products list from LS, if stored and non-expired */

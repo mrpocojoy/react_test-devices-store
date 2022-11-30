@@ -4,17 +4,19 @@ import { toggleVisibility, toggleTextContent } from 'utils/updateDOM'
 import { useRef } from 'react'
 
 import Icon from 'components/ui/icon/Icon'
-import FakeAnchor from '../../../components/ui/custom-anchor/CustomAnchor'
-import Button from '../../../components/ui/button/Button'
+import FakeAnchor from 'components/ui/custom-anchor/CustomAnchor'
+import Button from 'components/ui/button/Button'
 
 
-const SearchBar = ({ placeholder, action }) => {
+const SearchBar = ({ placeholder, value, action }) => {
 
   /*  Tracks input value   */
   const inputRef = useRef('')
 
   /*  Calls fn to update displayed results based on provided input value   */
-  const handleSearch = () => action(inputRef.current.value)
+  const handleSearch = () => action({
+    type: 'KEYWORDS', value: inputRef.current.value
+  })
   
 
   /*  Clears input content and calls fn to reset displayed results   */
@@ -54,6 +56,7 @@ const SearchBar = ({ placeholder, action }) => {
             onChange={handleSearch}
             className="search-bar__input" 
             ref={inputRef}
+            value={value.KEYWORDS}
           />
 
           <Button

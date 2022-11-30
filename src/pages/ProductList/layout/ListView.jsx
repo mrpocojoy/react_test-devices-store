@@ -1,54 +1,38 @@
 import './ListView.scss'
 
-import { useNavigate } from 'react-router-dom'
-import { useFilter } from 'hooks/useFilter'
 import { useProductList } from 'hooks/useProductList'
+import { useFilter } from 'hooks/useFilter'
 
+import Loader from 'components/ui/loader/Loader'
 import PageTitle from 'components/structures/page-title/PageTitle'
 import SearchBar from '../search-bar/SearchBar'
 import EmptyList from './EmptyList'
 import RegularList from './RegularList'
-import Loader from 'components/ui/loader/Loader'
 
 
 const ListView = () => {
-  
-  const navigate = useNavigate()
-
 
   /*  Obtains whole list of products from LS or API  */
   const { isLoading, productsList } = useProductList()
   
-  /*  Obtains keywords realtime from search bar input  */
-  const { filterByKeywords, updateFilter } = useFilter()
+  /*  Updates displayed devices based on applied filters  */
+  const { results, filters, updateFilter } = useFilter(productsList)
   
-  /*  Gets matches of keywords from original products list  */
-  const filteredProducts = filterByKeywords(productsList)
-  
-  /*  Updates displayed devices based on SearchBar input data  */
-  const updateKeywordsFilter = (keywords) => {
-    updateFilter({ type: 'keywords', payload: keywords })
-  }
-  
-  
+
   /*  Case: Waiting for API products response  */
-  if (isLoading || !filteredProducts)
+  if (isLoading || !results)
     return <Loader />
-  
-  /*  Case: Filtering returns single result -> Navigates to details view  */
-  if (filteredProducts.length === 1)
-    navigate(`/product/${filteredProducts[0].id}`)
   
   /*  Else, display filtered products in a list or "no results" message  */
   return (
     <div className="products-list__wrapper">
       <PageTitle classes="products-list__title" label="Our Devices">
-        <SearchBar placeholder="Search in PhoneHouse" action={updateKeywordsFilter}/>
+        <SearchBar placeholder="Search in PhoneHouse" value={filters} action={updateFilter}/>
       </PageTitle>
 
       {
-        (filteredProducts.length)
-          ? <RegularList products={filteredProducts} />
+        (results.length)
+          ? <RegularList products={results} />
           : <EmptyList />
       }
     </div>

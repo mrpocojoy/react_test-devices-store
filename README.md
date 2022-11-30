@@ -61,6 +61,7 @@ These are the key milestones to be tracked during this test:
 - ✅ Provide checkout button with click handling method.
 - ✅ Create utils to persist cart data in local storage.
 - ✅ Create customHook to modify cart data.
+- ✅ [EXTRA] Include a "default route" for HTTP404 - Not found.
 
 ### MILESTONE 8 - UX/UI improvements (v1)
 - ✅ Create basic structure for tech specs of items @ PDP.
@@ -68,10 +69,12 @@ These are the key milestones to be tracked during this test:
 - ✅ Re-structure styles files to styles per component.
 - ✅ Animate cart icon on item adding.
 - ✅ Animate checkout button on click.
+- ✅ [EXTRA] Make tech details scroll down smoother.
 
 ### MILESTONE 9 - UX/UI improvements (v2)
 - ✅ Improve general look and feel + responsiveness @ PLP.
 - ✅ Improve general look and feel + responsiveness @ PDP.
+- ✅ [EXTRA] Include site footer as component.
 
 ### MILESTONE 10 - General Optimizations (v1)
 - ✅ Shift filter state management to a customHook.
@@ -80,20 +83,18 @@ These are the key milestones to be tracked during this test:
 
 ### MILESTONE 11 - General Optimizations (v2)
 - ✅ Shift cart states management to reducer.
+- ✅ [EXTRA] Reformat code for scalable filtering.
 
 ### MILESTONE 12 - General Optimizations (v3)
-- Dynamic search debouncing.
+- ✅ Shift filter state management to reducer.
+- ✅ [EXTRA] Keep filtering state when navigating back @ PLP.
+- ✅ [EXTRA] Dynamic search debouncing.
 
-### EXTRA TASKS / IMPROVEMENTS - **************
-- ✅ Include a "default route" for HTTP404 - Not found.
-- ✅ Make tech details scroll down smoother.
-- ✅ Include site footer as component.
-- ✅ Include a cart content modal preview.
-- ↪️ Reformat code for scalable filtering.
-- Use badges (campaign, discount...) in PLP to improve marketing of products.
-- Provide random discounts to some products.
-- Keep filtering state when naavigating back @ PLP.
-- Create a user-friendly alias for product url.
+### TO-DO: EXTRA TASKS, IMPROVEMENTS, OPTIMIZATIONS...
+- [EXTRA] Include a cart content modal preview.
+- [EXTRA] Use badges (campaign, discount...) in PLP to improve marketing of products.
+- [EXTRA] Provide random discounts to some products.
+- [EXTRA] Create a user-friendly alias for product url.
 
 
 ---

@@ -20,14 +20,14 @@ const DetailsView = () => {
 
   /*  Case: Waiting for API products response  */
   if (isLoading || !productInfo)
-    return <Loader />
+    return <Loader />  
 
   /*  Else, display product information  */
   return (
     <div className="product-details__wrapper">
 
       <div className="product-details__back-link-wrapper">
-        <BackLink label="Back to List" classes='' icon="faArrowLeft" />
+        <BackLink label="Back to List" classes='' icon="faArrowLeft" destination='/' />
       </div>
       
       <div className="product-details__content">

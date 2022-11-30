@@ -22,7 +22,7 @@ function App() {
         <article className="App__content">
           
           <Routes>
-            <Route path='/' element={<ListView />} />
+            <Route exact path='/' element={<ListView />} />
             <Route path='/product/:productId' element={<DetailsView />} />
             <Route path='*' element={<NotFound />}>
             </Route>

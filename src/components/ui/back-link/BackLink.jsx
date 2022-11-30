@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import CustomAnchor from '../custom-anchor/CustomAnchor'
 import Icon from '../icon/Icon'
 
-const BackLink = ({ label, icon, classes='', labelFirst=false }) => {
+const BackLink = ({ destination, label, icon, classes='', labelFirst=false }) => {
 
   const navigate = useNavigate()
   const linkStyle = (labelFirst)
@@ -16,7 +16,7 @@ const BackLink = ({ label, icon, classes='', labelFirst=false }) => {
     <CustomAnchor
       classes="back-link"
       styles={linkStyle}
-      action={() => navigate(-1)}    
+      action={() => navigate(destination ?? -1)}    
     >
       {
         icon &&
